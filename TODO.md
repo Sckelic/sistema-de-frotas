@@ -8,6 +8,7 @@
 * [ ] Limpa a tela
 * [ ] Tratamento do valor de tipo (precisa ser 1 ou 2)
   * [ ] Moto: Perguntar se tem partida eletrica
+    * [ ] Caso foi 1, vai ser adicionado true, e 2 será false
   * [ ] Carro: Perguntar número de portas
 * [ ] Tratamento de valor numérico (não aceitar string em int)
 * [ ] O sistema deve permitir que o usuário digite na mesma linha, ao lado da pergunta
