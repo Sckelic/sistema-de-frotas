@@ -4,7 +4,7 @@ import java.util.List;
 public class ServiceVeiculo {
     private List<Veiculo> frota = new ArrayList<>();
 
-    public void save(Veiculo veiculo) throws Exception {
+    public void save(Veiculo veiculo) throws Exception { 
         if(veiculo.getAno() <= 0){
             throw new Exception("Nao e possivel adicionar um veiculo com ano nulo ou menor que 0");
         }
@@ -17,6 +17,12 @@ public class ServiceVeiculo {
         for (Veiculo veiculoFrota : frota){
             if (veiculoFrota.getPlaca().equalsIgnoreCase(veiculo.getPlaca()))
                 throw new Exception("Nao e possivel cadastrar uma placa mais de uma vez");
+        }
+        if (veiculo.getMarca() == null || veiculo.getMarca().isEmpty()){
+            throw new Exception("Nao e possivel deixar esse campo vazio");
+        }
+        if (veiculo.getModelo() == null || veiculo.getModelo().isEmpty()){
+            throw new Exception("Nao e possivel deixar esse campo vazio");
         }
     }
 
