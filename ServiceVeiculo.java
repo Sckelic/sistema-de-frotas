@@ -4,10 +4,20 @@ import java.util.List;
 public class ServiceVeiculo {
     private List<Veiculo> frota = new ArrayList<>();
 
-    public Veiculo save(Veiculo veiculo) {
-        
-        frota.add(veiculo);
-        return veiculo;
+    public void save(Veiculo veiculo) throws Exception {
+        if(veiculo.getAno() <= 0){
+            throw new Exception("Nao e possivel adicionar um veiculo com ano nulo ou menor que 0");
+        }
+        if (veiculo instanceof Carro){
+            int numeroPortas = ((Carro) veiculo).getNumeroPortas();
+            if (numeroPortas <= 0){
+                throw new Exception("Nao e possivel adicionar um carro com 0 portas ou menos");
+            }
+        }
+        for (Veiculo veiculoFrota : frota){
+            if (veiculoFrota.getPlaca().equalsIgnoreCase(veiculo.getPlaca()))
+                throw new Exception("Nao e possivel cadastrar uma placa mais de uma vez");
+        }
     }
 
     public List<Veiculo> findAll() {
