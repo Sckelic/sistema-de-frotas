@@ -1,15 +1,15 @@
 ## View
 ### Menu
-* [ ] Limpar a tela
-* [ ] O sistema deve permitir que o usuário digite na mesma linha, ao lado da pergunta
-* [ ] Tratamento de valor numérico (não aceitar string em int)
+* [x] Limpar a tela
+* [x] O sistema deve permitir que o usuário digite na mesma linha, ao lado da pergunta
+* [x] Tratamento de valor numérico (não aceitar string em int)
 
 ### Cadastro Veiculo
-* [ ] Limpa a tela
-* [ ] Tratamento do valor de tipo (precisa ser 1 ou 2)
-  * [ ] Moto: Perguntar se tem partida eletrica
-    * [ ] Caso foi 1, vai ser adicionado true, e 2 será false
-  * [ ] Carro: Perguntar número de portas
+* [x] Limpa a tela
+* [x] Tratamento do valor de tipo (precisa ser 1 ou 2)
+  * [x] Moto: Perguntar se tem partida eletrica
+    * [x] Caso foi 1, vai ser adicionado true, e 2 será false
+  * [x] Carro: Perguntar número de portas
 * [ ] Tratamento de valor numérico (não aceitar string em int)
 * [ ] O sistema deve permitir que o usuário digite na mesma linha, ao lado da pergunta
 * [ ] Aparecer a mensagem que foi cadastrado com sucesso.
