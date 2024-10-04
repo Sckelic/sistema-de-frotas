@@ -72,11 +72,21 @@ public class ViewCadVeiculo {
         aguardarEnter();
     }
 
-    public static void listar() {
-        //limparTela();
-        // List<Livro> livros = biblio.pesquisarTodos();
-        //var veiculos = .pesquisarTodos();
-        //livros.sort(Comparator.comparing(Livro::getTitulo));
+    /*public void listar() {
+        if (Veiculo.isEmpty()) {
+            System.out.println("A frota está vazia.");
+        } else {
+            System.out.println("Veículos da frota:");
+            for (Veiculo veiculo : Veiculo) {
+                System.out.println(veiculo.toString());
+            }
+        }
+    }*/
+
+    public static void pesquisarPorPlaca(){
+        limparTela();
+        System.out.print("Digite a placa");
+        String placaPesquisada = input.nextLine();
     }
 
     private static int inputNumerico(String mensagem) {

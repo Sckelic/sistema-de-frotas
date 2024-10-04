@@ -10,13 +10,13 @@
   * [x] Moto: Perguntar se tem partida eletrica
     * [x] Caso foi 1, vai ser adicionado true, e 2 será false
   * [x] Carro: Perguntar número de portas
-* [ ] Tratamento de valor numérico (não aceitar string em int)
-* [ ] O sistema deve permitir que o usuário digite na mesma linha, ao lado da pergunta
-* [ ] Aparecer a mensagem que foi cadastrado com sucesso.
-* [ ] Colocar exceção caso retornada pelo service (try-catch).
-* [ ] Mensagem de "Pressione enter para continuar", e colocar na:
-  * [ ] Adição com sucesso
-  * [ ] Depois de exceção
+* [x] Tratamento de valor numérico (não aceitar string em int)
+* [x] O sistema deve permitir que o usuário digite na mesma linha, ao lado da pergunta
+* [x] Aparecer a mensagem que foi cadastrado com sucesso.
+* [x] Colocar exceção caso retornada pelo service (try-catch).
+* [x] Mensagem de "Pressione enter para continuar", e colocar na:
+  * [x] Adição com sucesso
+  * [x] Depois de exceção
 
 ### Listar
 * [ ] Chamar o método de listar todos para retornar a frota
@@ -24,7 +24,7 @@
   * [ ] Para cada item usar o toString() para listar os veículos.
   
 ### Pesquisar por Placa
-* [ ] Limpar a tela
+* [x] Limpar a tela
 * [ ] Perguntar pela placa
 * [ ] Tratamento de exceção para caso não existir veículo
   * [ ] Colocar mensagem da exceção.
