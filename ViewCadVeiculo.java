@@ -48,15 +48,15 @@ public class ViewCadVeiculo {
         int ano = input.nextInt();
         novoVeiculo.setAno(ano);
 
-        if (typevehicle == 1) {
+        if (novoVeiculo instanceof Carro) {
             int numeroPortas = inputNumerico("Informe o número de portas: ");
-            novoVeiculo.setNumeroPortas(numeroPortas);
-        } else if (typevehicle == 2) {
+            ((Carro) novoVeiculo).setNumeroPortas(numeroPortas);
+        } else if (novoVeiculo instanceof Moto) {
             int partidaEletrica = inputNumerico("A moto tem partida elétrica? (1) Sim - (2) Não");
             if (partidaEletrica == 1) {
-                novoVeiculo.setPartidaEletrica(true);
+                ((Moto) novoVeiculo).setPartidaEletrica(true);
             } else if (partidaEletrica == 2) {
-                novoVeiculo.setPartidaEletrica(false);
+                ((Moto) novoVeiculo).setPartidaEletrica(false);
             } else {
                 System.out.println("Opção inválida. Por favor, informe 1 ou 2.");
             }
@@ -87,6 +87,7 @@ public class ViewCadVeiculo {
         limparTela();
         System.out.print("Digite a placa");
         String placaPesquisada = input.nextLine();
+        aguardarEnter();
     }
 
     private static int inputNumerico(String mensagem) {

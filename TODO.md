@@ -25,11 +25,11 @@
   
 ### Pesquisar por Placa
 * [x] Limpar a tela
-* [ ] Perguntar pela placa
+* [X] Perguntar pela placa
 * [ ] Tratamento de exceção para caso não existir veículo
   * [ ] Colocar mensagem da exceção.
 * [ ] Usar toString() para mostrar o veículo
-* [ ] Mensagem de "Pressione enter para continuar"
+* [X] Mensagem de "Pressione enter para continuar"
 
 ### Remover por Placa
 * [ ] Limpar a tela
