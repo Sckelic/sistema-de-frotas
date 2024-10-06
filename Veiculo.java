@@ -28,5 +28,9 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+    public static boolean isEmpty() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+    }
     
 }

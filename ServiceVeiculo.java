@@ -6,23 +6,23 @@ public class ServiceVeiculo {
 
     public void save(Veiculo veiculo) throws Exception { 
         if(veiculo.getAno() <= 0){
-            throw new Exception("Nao e possivel adicionar um veiculo com ano nulo ou menor que 0");
+            throw new Exception("NÃO FOI POSSÍVEL CADASTRAR O VEÍCULO.");
         }
         if (veiculo instanceof Carro){
             int numeroPortas = ((Carro) veiculo).getNumeroPortas();
             if (numeroPortas <= 0){
-                throw new Exception("Nao e possivel adicionar um carro com 0 portas ou menos");
+                throw new Exception("NÃO FOI POSSÍVEL CADASTRAR O VEÍCULO.");
             }
         }
         for (Veiculo veiculoFrota : frota){
             if (veiculoFrota.getPlaca().equalsIgnoreCase(veiculo.getPlaca()))
-                throw new Exception("Nao e possivel cadastrar uma placa mais de uma vez");
+                throw new Exception("NÃO FOI POSSÍVEL CADASTRAR O VEÍCULO.");
         }
         if (veiculo.getMarca() == null || veiculo.getMarca().isEmpty()){
-            throw new Exception("Nao e possivel deixar esse campo vazio");
+            throw new Exception("NÃO FOI POSSÍVEL CADASTRAR O VEÍCULO.");
         }
         if (veiculo.getModelo() == null || veiculo.getModelo().isEmpty()){
-            throw new Exception("Nao e possivel deixar esse campo vazio");
+            throw new Exception("NÃO FOI POSSÍVEL CADASTRAR O VEÍCULO.");
         }
     }
 
@@ -31,15 +31,23 @@ public class ServiceVeiculo {
     }
 
     public Veiculo findByPlaca(String placa) throws Exception {
+        @SuppressWarnings("unused")
+        List<Veiculo> veiculosEncontrados = new ArrayList<>();
+        boolean veiculoExiste = false;
         Veiculo veiculoRet = null;
         for (Veiculo veiculo : frota) {
             if (veiculo.getPlaca().equals(placa)) {
+                veiculoExiste = true;
                 veiculoRet = veiculo;
                 break;
             }
         }
+        //TODO: revisar (nao tenho certeza se esta correto e nao posso testar pq ta com erro na tela)
+        if (!veiculoExiste)
+            throw new Exception("Veículo não encontrado com a placa informada");
         if (veiculoRet == null)
             throw new Exception("Veículo não encontrado com a placa informada");
         return veiculoRet;
     }
-}
+
+} 

@@ -48,15 +48,15 @@ public class ViewCadVeiculo {
         int ano = input.nextInt();
         novoVeiculo.setAno(ano);
 
-        if (novoVeiculo instanceof Carro) {
+        if (typevehicle == 1) {
             int numeroPortas = inputNumerico("Informe o número de portas: ");
-            ((Carro) novoVeiculo).setNumeroPortas(numeroPortas);
-        } else if (novoVeiculo instanceof Moto) {
+            novoVeiculo.setNumeroPortas(numeroPortas);
+        } else if (typevehicle == 2) {
             int partidaEletrica = inputNumerico("A moto tem partida elétrica? (1) Sim - (2) Não");
             if (partidaEletrica == 1) {
-                ((Moto) novoVeiculo).setPartidaEletrica(true);
+                novoVeiculo.setPartidaEletrica(true);
             } else if (partidaEletrica == 2) {
-                ((Moto) novoVeiculo).setPartidaEletrica(false);
+                novoVeiculo.setPartidaEletrica(false);
             } else {
                 System.out.println("Opção inválida. Por favor, informe 1 ou 2.");
             }
@@ -72,23 +72,16 @@ public class ViewCadVeiculo {
         aguardarEnter();
     }
 
-    /*public void listar() {
-        if (Veiculo.isEmpty()) {
+    /*public static void listar() {
+        if(Veiculo.isEmpty()){
             System.out.println("A frota está vazia.");
-        } else {
-            System.out.println("Veículos da frota:");
+        }else{
+            System.out.println("Veículos da frota: ");
             for (Veiculo veiculo : Veiculo) {
                 System.out.println(veiculo.toString());
             }
         }
     }*/
-
-    public static void pesquisarPorPlaca(){
-        limparTela();
-        System.out.print("Digite a placa");
-        String placaPesquisada = input.nextLine();
-        aguardarEnter();
-    }
 
     private static int inputNumerico(String mensagem) {
         int valor = 0;

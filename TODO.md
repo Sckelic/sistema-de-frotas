@@ -41,10 +41,10 @@
 
 ## Service
 ### Cadastro Veiculo
-* [ ] Verificar campos
+* [X] Verificar campos
   * [X] Numero de portas maior 0
   * [X] Ano maior que 0
-  * [ ] Campos String não vazio ou null
+  * [X] Campos String não vazio ou null
 
 ### Listar
 * [ ] Override nos métodos toString()
@@ -53,10 +53,10 @@
     * [ ] Moto
 * [ ] No método, apenas retornar a coleção (frotas)
 
-### Pesquisar por Título
-* [ ] Verificar se existe
-  * [ ] Caso sim, retornar o veículo
-* [ ] Caso não existir, lançar exceção
+### Pesquisar por Placa
+* [X] Verificar se existe
+  * [X] Caso sim, retornar o veículo
+* [X] Caso não existir, lançar exceção
 
 ### Remover
 * [ ] Verificar se existe
