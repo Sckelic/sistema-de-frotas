@@ -47,11 +47,11 @@
   * [X] Campos String não vazio ou null
 
 ### Listar
-* [ ] Override nos métodos toString()
-  * [ ] Veiculo (vai ser o pai, e o resto vai apenas complementa-la)
-    * [ ] Carro
-    * [ ] Moto
-* [ ] No método, apenas retornar a coleção (frotas)
+* [X] Override nos métodos toString()
+  * [X] Veiculo (vai ser o pai, e o resto vai apenas complementa-la)
+    * [X] Carro
+    * [X] Moto
+* [X] No método, apenas retornar a coleção (frotas)
 
 ### Pesquisar por Placa
 * [X] Verificar se existe

@@ -42,11 +42,10 @@ public class ServiceVeiculo {
                 break;
             }
         }
-        //TODO: revisar (nao tenho certeza se esta correto e nao posso testar pq ta com erro na tela)
+
         if (!veiculoExiste)
             throw new Exception("Veículo não encontrado com a placa informada");
-        if (veiculoRet == null)
-            throw new Exception("Veículo não encontrado com a placa informada");
+
         return veiculoRet;
     }
 

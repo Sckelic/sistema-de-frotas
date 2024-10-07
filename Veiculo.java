@@ -25,12 +25,13 @@ public class Veiculo {
     public String getPlaca() {
         return placa;
     }
-    public void setPlaca(String placa) {
+
+    public void setPlaca(String placa){
         this.placa = placa;
     }
-    public static boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+
+    @Override
+    public String toString() {
+        return String.format("Placa: %s, Modelo: %s, Marca: %s, Ano: %d", getPlaca(), getModelo(), getMarca(), getAno());
     }
-    
 }

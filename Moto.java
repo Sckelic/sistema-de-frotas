@@ -1,7 +1,7 @@
 public class Moto extends Veiculo{
     private boolean partidaEletrica;
 
-    public boolean isPartidaEletrica() {
+    public boolean getPartidaEletrica() {
         return partidaEletrica;
     }
 
@@ -9,4 +9,8 @@ public class Moto extends Veiculo{
         this.partidaEletrica = partidaEletrica;
     }
     
+    @Override
+    public String toString(){
+        return "Moto - " + super.toString() + ", Possui partida elétrica: " + (getPartidaEletrica() ? "Sim" : "Não");
+    }
 }

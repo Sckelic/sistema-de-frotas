@@ -48,15 +48,13 @@ public class ViewCadVeiculo {
         int ano = input.nextInt();
         novoVeiculo.setAno(ano);
 
-        if (typevehicle == 1) {
+        if (novoVeiculo instanceof Carro) {
             int numeroPortas = inputNumerico("Informe o número de portas: ");
-            novoVeiculo.setNumeroPortas(numeroPortas);
-        } else if (typevehicle == 2) {
+            ((Carro) novoVeiculo).setNumeroPortas(numeroPortas);
+        } else if (novoVeiculo instanceof Moto) {
             int partidaEletrica = inputNumerico("A moto tem partida elétrica? (1) Sim - (2) Não");
-            if (partidaEletrica == 1) {
-                novoVeiculo.setPartidaEletrica(true);
-            } else if (partidaEletrica == 2) {
-                novoVeiculo.setPartidaEletrica(false);
+            if (partidaEletrica == 1 || partidaEletrica == 2) {
+                ((Moto) novoVeiculo).setPartidaEletrica(partidaEletrica == 1 ? true : false);
             } else {
                 System.out.println("Opção inválida. Por favor, informe 1 ou 2.");
             }
@@ -72,16 +70,19 @@ public class ViewCadVeiculo {
         aguardarEnter();
     }
 
-    /*public static void listar() {
-        if(Veiculo.isEmpty()){
+    public static void listar() {
+        var frota = service.findAll();
+        if (frota.isEmpty()) {
             System.out.println("A frota está vazia.");
-        }else{
-            System.out.println("Veículos da frota: ");
-            for (Veiculo veiculo : Veiculo) {
+        } else {
+            System.out.println("Veículos da frota:");
+            for (Veiculo veiculo : frota) {
                 System.out.println(veiculo.toString());
             }
         }
-    }*/
+
+        aguardarEnter();
+    }
 
     private static int inputNumerico(String mensagem) {
         int valor = 0;
@@ -124,7 +125,7 @@ public class ViewCadVeiculo {
                     break;
                 case 2:
                     limparTela();
-
+                    listar();
                     break;
                 case 3:
                     limparTela();
