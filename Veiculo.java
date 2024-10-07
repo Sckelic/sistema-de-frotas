@@ -32,6 +32,6 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return String.format("Placa: %s, Modelo: %s, Marca: %s, Ano: %d", getPlaca(), getModelo(), getMarca(), getAno());
+        return String.format("%s %s %s - Placa: %s - ", getMarca(), getModelo(), getAno(), getPlaca());
     }
 }

@@ -7,7 +7,7 @@
 ### Cadastro Veiculo
 * [x] Limpa a tela
 * [x] Tratamento do valor de tipo (precisa ser 1 ou 2)
-  * [x] Moto: Perguntar se tem partida eletrica
+  * [x] Moto: Perguntar se tem partida elétrica
     * [x] Caso foi 1, vai ser adicionado true, e 2 será false
   * [x] Carro: Perguntar número de portas
 * [x] Tratamento de valor numérico (não aceitar string em int)
@@ -19,25 +19,25 @@
   * [x] Depois de exceção
 
 ### Listar
-* [ ] Chamar o método de listar todos para retornar a frota
-* [ ] Ler a coleção de frota
-  * [ ] Para cada item usar o toString() para listar os veículos.
+* [X] Chamar o método de listar todos para retornar a frota
+* [X] Ler a coleção de frota
+  * [X] Para cada item usar o toString() para listar os veículos.
   
 ### Pesquisar por Placa
 * [x] Limpar a tela
 * [X] Perguntar pela placa
-* [ ] Tratamento de exceção para caso não existir veículo
-  * [ ] Colocar mensagem da exceção.
-* [ ] Usar toString() para mostrar o veículo
+* [X] Tratamento de exceção para caso não existir veículo
+  * [X] Colocar mensagem da exceção.
+* [X] Usar toString() para mostrar o veículo
 * [X] Mensagem de "Pressione enter para continuar"
 
 ### Remover por Placa
-* [ ] Limpar a tela
-* [ ] Deverá mostrar todos os veículos (chamar o método de listar)
-* [ ] Pedir ao usuário qual o veículo ele deseja remover
-* [ ] Tratamento de exceção para caso não encontrar a placa
-* [ ] Mostrar mensagem que foi sucesso.
-* [ ] Mensagem de "Pressione enter para continuar"
+* [X] Limpar a tela
+* [X] Deverá mostrar todos os veículos (chamar o método de listar)
+* [X] Pedir ao usuário qual o veículo ele deseja remover
+* [X] Tratamento de exceção para caso não encontrar a placa
+* [X] Mostrar mensagem que foi sucesso.
+* [X] Mensagem de "Pressione enter para continuar"
 
 ## Service
 ### Cadastro Veiculo
@@ -59,5 +59,5 @@
 * [X] Caso não existir, lançar exceção
 
 ### Remover
-* [ ] Verificar se existe
-* [ ] Caso não existir, lançar exceção
+* [X] Verificar se existe
+* [X] Caso não existir, lançar exceção
